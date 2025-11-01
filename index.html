@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaha Cultural Center</title>
+    <script src="/_sdk/element_sdk.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>@view-transition { navigation: auto; }</style>
+    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+</head>
+<body class="min-h-full">
+    <div class="min-h-full" style="background-color: #ffffff;">
+        <!-- Header Section -->
+        <header class="text-white py-16 relative" style="background-color: #00899a;">
+            <!-- Logo Container -->
+            <div class="absolute top-6 right-6 flex items-center gap-6" id="logo-container" dir="ltr">
+                <!-- Logo 1: Zaha Logo -->
+                <img src="https://www.zaha.gov.jo/image/logo.png" alt="Zaha Logo" class="h-20 w-auto object-contain">
+                <!-- Logo 2: Amman Logo -->
+                <img src="https://www.zaha.gov.jo/image/Amman-logo.png" alt="Amman Logo" class="h-20 w-auto object-contain">
+            </div>
+
+            <!-- Language Toggle Button -->
+            <button id="language-toggle" class="language-toggle" onclick="toggleLanguage()">
+                <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="m2 12c0-2.5 2-4.5 4-6s4.5-2 6.5-2 4.5 1 6.5 2 4 3.5 4 6" />
+                    <path d="m2 12c0 2.5 2 4.5 4 6s4.5 2 6.5 2 4.5-1 6.5-2 4-3.5 4-6" />
+                </svg>
+                <span id="language-text">English</span>
+            </button>
+
+            <!-- Centered content container -->
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <h1 id="center-name" class="text-5xl font-bold mb-4 animate-fade-in-up">Zaha Center Teams</h1>
+                <p id="center-tagline" class="text-xl opacity-90 max-w-2xl mx-auto animate-slide-in-left" style="animation-delay: 0.3s;">Discover amazing Zaha Center Teams where students explore their passions, develop new skills, and build lasting friendships</p>
+            </div>
+        </header>
+
+        <!-- Teams Section -->
+        <main class="max-w-6xl mx-auto px-6 py-16">
+            <!-- Section header -->
+            <div class="text-center mb-16">
+                <h2 id="our-clubs-title" class="text-4xl font-bold mb-4" style="color: #184682;">أفرقة مركزنا</h2>
+                <p id="clubs-description" class="text-lg max-w-2xl mx-auto" style="color: #000000;">انضم إلى أفرقة مركزنا النابضة بالحياة واكتشف مواهبك أثناء تكوين أصدقاء جدد وخلق ذكريات لا تُنسى</p>
+
+                <!-- Photo Slideshow -->
+                <div class="mt-12 mb-8">
+                    <div class="relative max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
+                        <div id="photo-slideshow" class="aspect-video relative">
+                            <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-1000" data-slide="0" style="background-image: url('https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?q=80&w=1600&auto=format&fit=crop'); background-size: cover; background-position: center;">
+                                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                                <div class="relative text-center text-white">
+                                    <div class="text-6xl mb-4">⚽</div>
+                                    <h3 class="text-2xl font-bold mb-2">فريق كرة القدم</h3>
+                                    <p class="text-lg opacity-90">التدريب والمنافسة بروح الفريق</p>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-1000 opacity-0" data-slide="1" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1600&auto=format&fit=crop'); background-size: cover; background-position: center;">
+                                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                                <div class="relative text-center text-white">
+                                    <div class="text-6xl mb-4">🤖</div>
+                                    <h3 class="text-2xl font-bold mb-2">فريق الروبوتات</h3>
+                                    <p class="text-lg opacity-90">الابتكار والتكنولوجيا المتقدمة</p>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-1000 opacity-0" data-slide="2" style="background-image: url('https://images.unsplash.com/photo-1513883049090-d0b7439799bf?q=80&w=1600&auto=format&fit=crop'); background-size: cover; background-position: center;">
+                                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                                <div class="relative text-center text-white">
+                                    <div class="text-6xl mb-4">🎹</div>
+                                    <h3 class="text-2xl font-bold mb-2">فريق البيانو</h3>
+                                    <p class="text-lg opacity-90">الموسيقى الكلاسيكية والحديثة</p>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-1000 opacity-0" data-slide="3" style="background-image: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1600&auto=format&fit=crop'); background-size: cover; background-position: center;">
+                                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                                <div class="relative text-center text-white">
+                                    <div class="text-6xl mb-4">🎸</div>
+                                    <h3 class="text-2xl font-bold mb-2">فريق الجيتار</h3>
+                                    <p class="text-lg opacity-90">الموسيقى من الأكوستيك إلى الروك</p>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-1000 opacity-0" data-slide="4" style="background-image: url('https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1600&auto=format&fit=crop'); background-size: cover; background-position: center;">
+                                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                                <div class="relative text-center text-white">
+                                    <div class="text-6xl mb-4">💃</div>
+                                    <h3 class="text-2xl font-bold mb-2">فريق الدبكة
+                                        </h3>
+                                    <p class="text-lg opacity-90">التعبير الفني من خلال الحركة</p>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-1000 opacity-0" data-slide="5" style="background-image: url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1600&auto=format&fit=crop'); background-size: cover; background-position: center;">
+                                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                                <div class="relative text-center text-white">
+                                    <div class="text-6xl mb-4">💻</div>
+                                    <h3 class="text-2xl font-bold mb-2">فريق البرمجة</h3>
+                                    <p class="text-lg opacity-90">تطوير التطبيقات والألعاب</p>
+                                </div>
+                            </div>
+
+                            <!-- Slideshow indicators -->
+                            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                                <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all duration-300" onclick="goToSlide(0)"></button>
+                                <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all duration-300" onclick="goToSlide(1)"></button>
+                                <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all duration-300" onclick="goToSlide(2)"></button>
+                                <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all duration-300" onclick="goToSlide(3)"></button>
+                                <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all duration-300" onclick="goToSlide(4)"></button>
+                                <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all duration-300" onclick="goToSlide(5)"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Decorative section divider -->
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- News Ticker Section -->
+            <div class="py-4 mb-12 overflow-hidden relative" style="background-color: #ffba00;">
+                <div class="flex items-center">
+                    <div class="px-4 py-2 font-bold text-sm whitespace-nowrap" style="background-color: #f25242; color: #ffffff;">
+                        <span id="breaking-news-label">أخبار عاجلة</span>
+                    </div>
+                    <div class="flex-1 overflow-hidden">
+                        <div id="news-ticker" class="whitespace-nowrap animate-scroll text-white font-semibold">
+                            🏆 فريق كرة القدم يفوز بالبطولة الإقليمية 3-1 • 🤖 فريق الروبوتات يتأهل لنهائيات FIRST الوطنية • 🎹 فريق البيانو ينظم حفلاً خيرياً الأسبوع القادم • 🎸 فريق الجيتار يسجل أول أغنية أصلية في الاستوديو • 💃 فريق الرقص يحصل على المركز الأول في مهرجان الفنون المحلي • 💻 فريق البرمجة يطلق تطبيق إدارة مدرسية جديد
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team cards grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Team 1 - Football Team Card -->
+                <div class="team-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer" onclick="showTeamPage('football')">
+                    <div class="team-video h-48" style="background-color: #00a240;"></div>
+                    <div class="p-6">
+                        <h3 id="team-1-name" class="text-2xl font-bold mb-3" style="color: #184682;">فريق كرة القدم</h3>
+                        <p id="team-1-description" class="leading-relaxed" style="color: #000000;">لاعبو كرة قدم متحمسون يتدربون بجد ويتنافسون بشرف ويبنون مهارات العمل الجماعي داخل وخارج الملعب.</p>
+                        <div class="mt-4 flex items-center justify-between text-sm">
+                            <span id="sports-tag" class="px-3 py-1 rounded-full" style="background-color: #f1ede5; color: #00a240;">رياضة</span>
+                            <span id="explore-text-1" class="font-semibold" style="color: #00899a;">انقر للاستكشاف ←</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team 2 - Robotics Team -->
+                <div class="team-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer" onclick="showTeamPage('robotics')">
+                    <div class="team-video h-48" style="background-color: #184682;"></div>
+                    <div class="p-6">
+                        <h3 id="team-2-name" class="text-2xl font-bold mb-3" style="color: #184682;">فريق الروبوتات</h3>
+                        <p id="team-2-description" class="leading-relaxed" style="color: #000000;">مهندسون مبتكرون يصممون ويبنون ويبرمجون الروبوتات أثناء تعلم التكنولوجيا المتطورة ومهارات حل المشكلات.</p>
+                        <div class="mt-4 flex items-center justify-between text-sm">
+                            <span id="technology-tag" class="px-3 py-1 rounded-full" style="background-color: #f1ede5; color: #184682;">تكنولوجيا</span>
+                            <span id="explore-text-2" class="font-semibold" style="color: #00899a;">انقر للاستكشاف ←</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team 3 - Piano Team -->
+                <div class="team-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer" onclick="showTeamPage('piano')">
+                    <div class="team-video h-48" style="background-color: #f25242;"></div>
+                    <div class="p-6">
+                        <h3 id="team-3-name" class="text-2xl font-bold mb-3" style="color: #184682;">فريق البيانو</h3>
+                        <p id="team-3-description" class="leading-relaxed" style="color: #000000;">عازفو بيانو موهوبون يتقنون القطع الكلاسيكية والحديثة ويؤدون في الحفلات الموسيقية ويشاركون فرحة الموسيقى مع الآخرين.</p>
+                        <div class="mt-4 flex items-center justify-between text-sm">
+                            <span id="music-tag-1" class="px-3 py-1 rounded-full" style="background-color: #f1ede5; color: #f25242;">موسيقى</span>
+                            <span id="explore-text-3" class="font-semibold" style="color: #00899a;">انقر للاستكشاف ←</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team 4 - Guitar Team -->
+                <div class="team-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer" onclick="showTeamPage('guitar')">
+                    <div class="team-video h-48" style="background-color: #ffba00;"></div>
+                    <div class="p-6">
+                        <h3 id="team-4-name" class="text-2xl font-bold mb-3" style="color: #184682;">فريق الجيتار</h3>
+                        <p id="team-4-description" class="leading-relaxed" style="color: #000000;">عازفو جيتار ماهرون يستكشفون أنماط موسيقية متنوعة، من الألحان الأكوستيكية إلى الروك الكهربائي، ويقدمون عروضاً رائعة.</p>
+                        <div class="mt-4 flex items-center justify-between text-sm">
+                            <span id="music-tag-2" class="px-3 py-1 rounded-full" style="background-color: #f1ede5; color: #ffba00;">موسيقى</span>
+                            <span id="explore-text-4" class="font-semibold" style="color: #00899a;">انقر للاستكشاف ←</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team 5 - Dance Team -->
+                <div class="team-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer" onclick="showTeamPage('dance')">
+                    <div class="team-video h-48" style="background-color: #8062c6;"></div>
+                    <div class="p-6">
+                        <h3 id="team-5-name" class="text-2xl font-bold mb-3" style="color: #184682;">فريق الدبكة</h3>
+                        <p id="team-5-description" class="leading-relaxed" style="color: #000000;">راقصون نشيطون يعبرون عن الإبداع من خلال الحركة، ويؤدون في المسابقات، ويجلبون الفرح من خلال التعبير الفني.</p>
+                        <div class="mt-4 flex items-center justify-between text-sm">
+                            <span id="arts-tag" class="px-3 py-1 rounded-full" style="background-color: #f1ede5; color: #8062c6;">فنون</span>
+                            <span id="explore-text-5" class="font-semibold" style="color: #00899a;">انقر للاستكشاف ←</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team 6 - Coding Team -->
+                <div class="team-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer" onclick="showTeamPage('coding')">
+                    <div class="team-video h-48" style="background-color: #00899a;"></div>
+                    <div class="p-6">
+                        <h3 id="team-6-name" class="text-2xl font-bold mb-3" style="color: #184682;">فريق البرمجة</h3>
+                        <p id="team-6-description" class="leading-relaxed" style="color: #000000;">مبرمجون مبدعون يطورون التطبيقات والمواقع والألعاب أثناء تعلم لغات البرمجة والتفكير الحاسوبي.</p>
+                        <div class="mt-4 flex items-center justify-between text-sm">
+                            <span id="technology-tag-2" class="px-3 py-1 rounded-full" style="background-color: #f1ede5; color: #00899a;">تكنولوجيا</span>
+                            <span id="explore-text-6" class="font-semibold" style="color: #00899a;">انقر للاستكشاف ←</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Team Detail Page -->
+        <div id="team-detail-page" class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-500 ease-in-out overflow-y-auto">
+            <div class="min-h-full">
+                <!-- Team Detail Header -->
+                <header id="team-detail-header" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white py-16">
+                    <div class="max-w-6xl mx-auto px-6">
+                        <button onclick="closeTeamPage()" class="mb-6 flex items-center text-white hover:text-pink-200 transition-colors">
+                            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                            </svg>
+                            <span id="back-to-clubs">العودة إلى الأندية</span>
+                        </button>
+                        <h1 id="detail-team-name" class="text-5xl font-bold mb-4">Club Name</h1>
+                        <p id="detail-team-description" class="text-xl opacity-90 max-w-3xl">Club description will appear here</p>
+                    </div>
+                </header>
+
+                <!-- Team Detail Content -->
+                <div class="max-w-6xl mx-auto px-6 py-16">
+                    <!-- Team Members & Coaches -->
+                    <div class="mb-16">
+                        <h2 id="meet-our-club" class="text-3xl font-bold text-gray-800 mb-8">تعرف على ناديّنا</h2>
+
+                        <!-- Coaches Section -->
+                        <div class="mb-12">
+                            <h3 id="club-advisors" class="text-2xl font-semibold text-gray-700 mb-6">مستشارو النادي</h3>
+                            <div id="team-coaches" class="grid md:grid-cols-2 gap-6"></div>
+                        </div>
+
+                        <!-- Team Members Grid -->
+                        <div class="mb-8">
+                            <h3 id="club-members" class="text-2xl font-semibold text-gray-700 mb-6">أعضاء النادي</h3>
+                            <div id="team-members" class="grid md:grid-cols-4 gap-6"></div>
+                        </div>
+                    </div>
+
+                    <!-- Projects Section -->
+                    <div class="mb-16">
+                        <h2 id="club-activities" class="text-3xl font-bold text-gray-800 mb-8">أنشطة النادي</h2>
+                        <div id="team-projects" class="grid md:grid-cols-2 gap-8"></div>
+                    </div>
+
+                    <!-- Events Section -->
+                    <div class="mb-16">
+                        <h2 id="upcoming-events" class="text-3xl font-bold text-gray-800 mb-8">الأحداث القادمة</h2>
+                        <div id="team-events" class="space-y-6"></div>
+                    </div>
+
+                    <!-- Awards Section -->
+                    <div class="mb-16">
+                        <h2 id="awards-achievements" class="text-3xl font-bold text-gray-800 mb-8">الجوائز والإنجازات</h2>
+                        <div id="team-awards" class="grid md:grid-cols-2 gap-8"></div>
+                    </div>
+
+                    <!-- Photo Gallery Section - 4 Photos -->
+                    <div class="mb-16">
+                        <h2 id="photo-gallery-title" class="text-3xl font-bold mb-8" style="color: #184682;">معرض الصور</h2>
+                        <div id="team-photos" class="grid md:grid-cols-2 gap-6">
+                            <!-- PHOTO PLACEMENT: Replace the placeholder divs below with your actual team photos -->
+                            <!-- Photo 1: Replace this div with your first photo -->
+                            <div class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow">
+                                <div class="aspect-video bg-gray-200 flex items-center justify-center">
+                                    <span class="text-gray-400">Photo 1</span>
+                                </div>
+                            </div>
+                            <!-- Photo 2: Replace this div with your second photo -->
+                            <div class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow">
+                                <div class="aspect-video bg-gray-200 flex items-center justify-center">
+                                    <span class="text-gray-400">Photo 2</span>
+                                </div>
+                            </div>
+                            <!-- Photo 3: Replace this div with your third photo -->
+                            <div class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow">
+                                <div class="aspect-video bg-gray-200 flex items-center justify-center">
+                                    <span class="text-gray-400">Photo 3</span>
+                                </div>
+                            </div>
+                            <!-- Photo 4: Replace this div with your fourth photo -->
+                            <div class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow">
+                                <div class="aspect-video bg-gray-200 flex items-center justify-center">
+                                    <span class="text-gray-400">Photo 4</span>
+                                </div>
+                            </div>
+                            <!-- END PHOTO PLACEMENT -->
+                        </div>
+                    </div>
+
+                    <!-- Video Gallery Section - 3 Videos -->
+                    <div class="mb-16">
+                        <h2 id="video-gallery-title" class="text-3xl font-bold mb-8" style="color: #184682;">معرض الفيديوهات</h2>
+                        <div id="team-videos" class="grid md:grid-cols-3 gap-6">
+                            <!-- VIDEO PLACEMENT: Replace the placeholder divs below with your actual team videos -->
+                            <!-- Video 1: Replace this div with your first video (use iframe for YouTube/Vimeo or video tag for direct upload) -->
+                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                <div class="aspect-video bg-gray-200 flex items-center justify-center">
+                                    <span class="text-gray-400">Video 1</span>
+                                    <!-- Replace above with: <iframe class="w-full h-full" src="YOUR_VIDEO_URL" frameborder="0" allowfullscreen></iframe> -->
+                                </div>
+                            </div>
+                            <!-- Video 2: Replace this div with your second video -->
+                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                <div class="aspect-video bg-gray-200 flex items-center justify-center">
+                                    <span class="text-gray-400">Video 2</span>
+                                    <!-- Replace above with: <iframe class="w-full h-full" src="YOUR_VIDEO_URL" frameborder="0" allowfullscreen></iframe> -->
+                                </div>
+                            </div>
+                            <!-- Video 3: Replace this div with your third video -->
+                            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                                <div class="aspect-video bg-gray-200 flex items-center justify-center">
+                                    <span class="text-gray-400">Video 3</span>
+                                    <!-- Replace above with: <iframe class="w-full h-full" src="YOUR_VIDEO_URL" frameborder="0" allowfullscreen></iframe> -->
+                                </div>
+                            </div>
+                            <!-- END VIDEO PLACEMENT -->
+                        </div>
+                    </div>
+
+                    <!-- Special Sections -->
+                    <div id="team-special-sections" class="hidden"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-12 mt-16">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Social Media Section -->
+                    <div class="text-center md:text-left">
+                        <h3 id="social-media-title" class="text-xl font-bold mb-4">تابعنا على</h3>
+
+                        <div class="flex justify-center md:justify-start space-x-4 space-x-reverse">
+                            <a href="http://x.com/zahacenteramm" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.facebook.com/zahaculturalcenter/" class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-900 transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                </svg>
+                            </a>
+                            
+                            <a href="https://www.youtube.com/@zahaculturalcenter" class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Location Section -->
+                    <div class="text-center md:text-left">
+                        <h3 id="location-title" class="text-xl font-bold mb-4">موقعنا</h3>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-center md:justify-start">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span id="school-address" class="text-gray-300">خلدا ,خلف المدارس الإنجليزية, قرب اشارات البنك العربي</span>
+                            </div>
+                            <div class="flex items-center justify-center md:justify-start">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <span id="school-phone" class="text-gray-300">+962 065531577</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Operating Hours Section -->
+                    <div class="text-center md:text-left">
+                        <h3 id="hours-title" class="text-xl font-bold mb-4">أوقات العمل</h3>
+                        <div class="space-y-2 text-gray-300">
+                            <div class="flex justify-between">
+                                <span id="sunday-thursday">الأحد - الخميس:</span>
+                                <span>7:00 AM - 3:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span id="friday">الجمعة:</span>
+                                <span id="closed-friday">مغلق</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span id="saturday">السبت:</span>
+                                <span>9:00 AM - 1:00 PM</span>
+                            </div>
+                            <div class="mt-3 flex items-center justify-center md:justify-start">
+                                <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse mr-2"></div>
+                                <span id="currently-open" class="text-green-400 font-semibold">مفتوح الآن</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                    <p id="copyright" class="text-gray-400">© 2025 مركز زها الثقافي. جميع الحقوق محفوظة.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'995c48d510bc6599',t:'MTc2MTY3MzkyMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>

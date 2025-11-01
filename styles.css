@@ -1,0 +1,172 @@
+/* Required CSS rule for Canva Code compatibility */
+body {
+    box-sizing: border-box;
+}
+
+/* Team card hover effects */
+.team-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Team video section styling */
+.team-video {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Play button styling */
+.play-button-large {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+    margin: 0 auto;
+}
+
+.play-button-large:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+.play-button-large::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 20px solid #667eea;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    margin-left: 4px;
+}
+
+/* Pulse animation for play button */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
+/* Fade in up animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide in left animation */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animation classes */
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+}
+
+/* Team card animations */
+.team-card {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Staggered animation delays for team cards */
+.team-card:nth-child(1) { animation-delay: 0.1s; }
+.team-card:nth-child(2) { animation-delay: 0.2s; }
+.team-card:nth-child(3) { animation-delay: 0.3s; }
+.team-card:nth-child(4) { animation-delay: 0.4s; }
+.team-card:nth-child(5) { animation-delay: 0.5s; }
+.team-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Gradient background */
+.gradient-bg {
+    background: linear-gradient(135deg, #184682 0%, #00899a 100%);
+}
+
+/* Section divider */
+.section-divider {
+    background-color: #184682;
+    height: 2px;
+    margin: 3rem 0;
+}
+
+/* News ticker animation */
+.animate-scroll {
+    animation: scroll 60s linear infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Language toggle button */
+.language-toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 6px 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+    font-size: 11px;
+    z-index: 10;
+}
+
+.language-toggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-1px);
+}
+
+.language-toggle svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+}
+
+/* RTL (Right-to-Left) styles for Arabic */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .max-w-6xl {
+    margin-left: auto;
+    margin-right: auto;
+}
