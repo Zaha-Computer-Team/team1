@@ -29,7 +29,7 @@ const translations = {
     en: {
         // Header content
         center_name: "Zaha Cultural Center",
-        center_tagline: "Discover amazing school clubs where students explore their passions, develop new skills, and build lasting friendships",
+        center_tagline: "Discover amazing zaha clubs where students explore their passions, develop new skills, and build lasting friendships",
         
         // Navigation and UI
         language_text: "العربية",
@@ -49,7 +49,7 @@ const translations = {
         video_gallery: "Video Gallery",
         follow_us: "Follow Us",
         our_location: "Our Location",
-        school_address: "123 Education Street, City",
+        school_address: "Khalda, behind the English schools, near the Arab Bank traffic lights",
         school_phone: "+962 065531577 ",
         operating_hours: "Operating Hours",
         sunday_thursday: "Sunday - Thursday:",
@@ -76,7 +76,7 @@ const translations = {
         // Navigation and UI
         language_text: "English",
         our_teams: "أفرقة مركزنا",
-        teams_description: "انضم إلى أنديتنا المدرسية النابضة بالحياة واكتشف مواهبك أثناء تكوين أصدقاء جدد وخلق ذكريات لا تُنسى",
+        teams_description: "انضم إلى أنديتنا النابضة بالحياة واكتشف مواهبك أثناء تكوين أصدقاء جدد وخلق ذكريات لا تُنسى",
         watch_teams_video: "شاهد أنديتنا في العمل",
         video_description: "انظر كيف يزدهر طلابنا في أنشطتهم المفضلة",
         click_to_explore: "انقر للاستكشاف ←",
@@ -833,3 +833,4 @@ if (window.elementSdk) {
         mapToEditPanelValues
     });
 }
+
