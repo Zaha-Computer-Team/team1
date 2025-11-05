@@ -139,7 +139,7 @@ function updateLanguageContent() {
     const newsTicker = document.getElementById('news-ticker');
     if (newsTicker) {
         if (currentLanguage === 'ar') {
-            newsTicker.textContent = '🏆 فريق كرة القدم يفوز بالبطولة الإقليمية 3-1 • 🤖 فريق الروبوتات يتأهل لنهائيات FIRST الوطنية • 🎹 فريق البيانو ينظم حفلاً خيرياً الأسبوع القادم • 🎸 فريق الجيتار يسجل أول أغنية أصلية في الاستوديو • 💃 فريق الدبكة يحصل على المركز الأول في مهرجان الفنون المحلي • 💻 فريق البرمجة يطلق تطبيق إدارة مدرسية جديد';
+            newsTicker.textContent = '🏆 فريق كرة القدم يفوز بالبطولة الإقليمية 3-1 • 🤖 فريق الروبوتات يتأهل لنهائيات FIRST الوطنية • 🎹 فريق البيانو ينظم حفلاً خيرياً الأسبوع القادم • 🎸 فريق الجيتار يسجل أول أغنية أصلية في الاستوديو • 💃 فريق الدبكة يحصل على المركز الأول في مهرجان الفنون المحلي • 💻 فريق البرمجة يطلق تطبيق  جديد';
         } else {
             newsTicker.textContent = '🏆 Football team wins regional championship 3-1 • 🤖 Robotics team qualifies for national FIRST finals • 🎹 Piano team hosting charity concert next week • 🎸 Guitar team records first original song in studio • 💃 Dabka team wins first place in local arts festival • 💻 Coding team launches new school management app';
         }
@@ -833,4 +833,5 @@ if (window.elementSdk) {
         mapToEditPanelValues
     });
 }
+
 
