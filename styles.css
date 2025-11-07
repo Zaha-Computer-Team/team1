@@ -1,6 +1,12 @@
 /* Required CSS rule for Canva Code compatibility */
 body {
     box-sizing: border-box;
+     font-family: 'Tajawal', sans-serif;
+}
+
+/* Apply Tajawal font to all elements */
+* {
+    font-family: 'Tajawal', sans-serif;
 }
 
 /* Team card hover effects */
@@ -169,4 +175,257 @@ body {
 [dir="rtl"] .max-w-6xl {
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #ffffff;
+     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    font-family: 'Tajawal', sans-serif;
+}
+
+.navbar.scrolled {
+     background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+     -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.12);
+}
+
+.navbar-logo {
+    color: #184682;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo:hover {
+    color: #00899a;
+     transform: scale(1.05);
+}
+
+.nav-link {
+    color: #184682;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+     padding: 10px 18px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    position: relative;
+     display: inline-block;
+    white-space: nowrap;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #00899a;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 70%;
+}
+
+.nav-link:hover {
+    color: #00899a;
+       background-color: rgba(0, 137, 154, 0.08);
+}
+
+.nav-link.active {
+    color: #00899a;
+     background-color: rgba(0, 137, 154, 0.12);
+    font-weight: 600;
+}
+
+.nav-link-main-website {
+    color: #ffffff;
+     background: linear-gradient(135deg, #00899a 0%, #184682 100%);
+    text-decoration: none;
+       font-weight: 700;
+    font-size: 15px;
+    padding: 12px 24px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+     box-shadow: 0 2px 8px rgba(0, 137, 154, 0.2);
+    white-space: nowrap;
+}
+
+.nav-link-main-website:hover {
+ background: linear-gradient(135deg, #184682 0%, #00899a 100%);
+    transform: translateY(-2px);
+     box-shadow: 0 6px 20px rgba(0, 137, 154, 0.4); 
+}
+
+.navbar-mobile-btn {
+    color: #184682;
+    background: none;
+    border: none;
+    cursor: pointer;
+     padding: 10px;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-mobile-btn:hover {
+    color: #00899a;
+     background-color: rgba(0, 137, 154, 0.1);
+}
+
+
+.mobile-menu {
+    background-color: #ffffff;
+    border-top: 2px solid rgba(0, 137, 154, 0.1);
+    animation: slideDown 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+         transform: translateY(-15px);
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+          max-height: 500px;
+    }
+}
+
+.mobile-nav-link {
+    display: block;
+    color: #184682;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+     padding: 14px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+     margin: 4px 0;
+    position: relative;
+}
+
+.mobile-nav-link::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 0;
+    background-color: #00899a;
+    border-radius: 2px;
+    transition: height 0.3s ease;
+}
+
+.mobile-nav-link:hover::before,
+.mobile-nav-link.active::before {
+    height: 60%;
+}
+
+
+.mobile-nav-link:hover {
+    color: #00899a;
+    background-color: rgba(0, 137, 154, 0.1);
+     padding-right: 30px;
+}
+
+
+.mobile-nav-link-main {
+    display: block;
+    color: #ffffff;
+     background: linear-gradient(135deg, #00899a 0%, #184682 100%);
+    text-decoration: none;
+   font-weight: 700;
+    font-size: 16px;
+     padding: 14px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-align: center;
+      margin-top: 8px;
+    box-shadow: 0 2px 8px rgba(0, 137, 154, 0.2);
+}
+
+.mobile-nav-link-main:hover {
+      background: linear-gradient(135deg, #184682 0%, #00899a 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 137, 154, 0.3);
+}
+
+/* RTL Support for Navigation */
+[dir="rtl"] .nav-link {
+   text-align: right;
+}
+
+[dir="rtl"] .navbar-logo {
+    direction: rtl;
+}
+
+[dir="rtl"] .mobile-nav-link {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .mobile-nav-link::before {
+    right: auto;
+    left: 0;
+}
+
+[dir="rtl"] .mobile-nav-link:hover {
+    padding-right: 20px;
+    padding-left: 30px;
+}
+
+[dir="ltr"] .space-x-reverse {
+    direction: ltr;
+}
+
+[dir="rtl"] .space-x-reverse {
+    direction: rtl;
+}
+/* Desktop navigation spacing */
+#desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+[dir="rtl"] #desktop-nav {
+    flex-direction: row-reverse;
+}
+
+[dir="ltr"] #desktop-nav {
+    flex-direction: row;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+ scroll-padding-top: 80px;
+}
+
+/* Add padding for fixed navbar */
+section[id],
+header[id],
+main[id] {
+    scroll-margin-top: 80px;
 }
