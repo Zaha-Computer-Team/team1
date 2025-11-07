@@ -1,4 +1,3 @@
-// Default configuration object containing all editable content and styling - Arabic as default
 const defaultConfig = {
     // Main center information in Arabic
     center_name: "مركز زها الثقافي", // Main heading text displayed in header
@@ -1034,6 +1033,7 @@ if (window.elementSdk) {
         mapToEditPanelValues
     });
 }
+
 
 
 
