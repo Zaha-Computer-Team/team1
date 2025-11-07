@@ -49,8 +49,8 @@ const translations = {
         video_gallery: "Video Gallery",
         follow_us: "Follow Us",
         our_location: "Our Location",
-        school_address: "Khalda, behind the English schools, near the Arab Bank traffic lights",
-        school_phone: "+962 065531577 ",
+        zaha_address: "Khalda, behind the English schools, near the Arab Bank traffic lights",
+        zaha_phone: "+962 065531577 ",
         operating_hours: "Operating Hours",
         sunday_thursday: "Sunday - Thursday:",
         friday: "Friday:",
@@ -833,5 +833,6 @@ if (window.elementSdk) {
         mapToEditPanelValues
     });
 }
+
 
 
