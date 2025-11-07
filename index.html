@@ -12,8 +12,78 @@
 </head>
 <body class="min-h-full">
     <div class="min-h-full" style="background-color: #ffffff;">
+            <!-- Navigation Bar -->
+        <nav id="navbar" class="navbar fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <!-- Logo -->
+                    <div class="flex items-center">
+                        <a href="#home" class="navbar-logo">
+                            <span class="text-xl font-bold">Zaha Center</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Desktop Navigation Links -->
+                    <div class="hidden md:flex items-center space-x-8 space-x-reverse" id="desktop-nav">
+                        <a href="#home" class="nav-link" data-nav="home">
+                            <span id="nav-home-en">Home</span>
+                            <span id="nav-home-ar" style="display: none;">الرئيسية</span>
+                        </a>
+                        <a href="#about" class="nav-link" data-nav="about">
+                            <span id="nav-about-en">About</span>
+                            <span id="nav-about-ar" style="display: none;">من نحن</span>
+                        </a>
+                        <a href="#teams" class="nav-link" data-nav="teams">
+                            <span id="nav-teams-en">Teams</span>
+                            <span id="nav-teams-ar" style="display: none;">الأفرقة</span>
+                        </a>
+                        <a href="#contact" class="nav-link" data-nav="contact">
+                            <span id="nav-contact-en">Contact Us</span>
+                            <span id="nav-contact-ar" style="display: none;">اتصل بنا</span>
+                        </a>
+                        <a href="https://www.zaha.gov.jo" target="_blank" class="nav-link-main-website">
+                            <span id="nav-main-website-en">Go to Main Website</span>
+                            <span id="nav-main-website-ar" style="display: none;">الموقع الرئيسي</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden navbar-mobile-btn">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mobile-menu">
+                <div class="px-4 pt-2 pb-4 space-y-2">
+                    <a href="#home" class="mobile-nav-link" data-nav="home">
+                        <span id="nav-home-mobile-en">Home</span>
+                        <span id="nav-home-mobile-ar" style="display: none;">الرئيسية</span>
+                    </a>
+                    <a href="#about" class="mobile-nav-link" data-nav="about">
+                        <span id="nav-about-mobile-en">About</span>
+                        <span id="nav-about-mobile-ar" style="display: none;">من نحن</span>
+                    </a>
+                    <a href="#teams" class="mobile-nav-link" data-nav="teams">
+                        <span id="nav-teams-mobile-en">Teams</span>
+                        <span id="nav-teams-mobile-ar" style="display: none;">الأفرقة</span>
+                    </a>
+                    <a href="#contact" class="mobile-nav-link" data-nav="contact">
+                        <span id="nav-contact-mobile-en">Contact Us</span>
+                        <span id="nav-contact-mobile-ar" style="display: none;">اتصل بنا</span>
+                    </a>
+                    <a href="https://www.zaha.gov.jo" target="_blank" class="mobile-nav-link-main">
+                        <span id="nav-main-website-mobile-en">Go to Main Website</span>
+                        <span id="nav-main-website-mobile-ar" style="display: none;">الموقع الرئيسي</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
         <!-- Header Section -->
-        <header class="text-white py-16 relative" style="background-color: #00899a;">
+                <header id="home" class="text-white py-16 relative mt-16" style="background-color: #00899a;">
             <!-- Logo Container -->
             <div class="absolute top-6 right-6 flex items-center gap-6" id="logo-container" dir="ltr">
                 <!-- Logo 1: Zaha Logo -->
@@ -39,9 +109,20 @@
                 <p id="center-tagline" class="text-xl opacity-90 max-w-2xl mx-auto animate-slide-in-left" style="animation-delay: 0.3s;">Discover amazing Zaha Center Teams where students explore their passions, develop new skills, and build lasting friendships</p>
             </div>
         </header>
+         <!-- About Section -->
+        <section id="about" class="py-16 bg-gray-50">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 id="about-title" class="text-4xl font-bold mb-4" style="color: #184682;">عن مركز زها الثقافي</h2>
+                    <p id="about-description" class="text-lg max-w-3xl mx-auto" style="color: #000000;">
+                        مركز زها الثقافي هو مركز ثقافي تعليمي يهدف إلى تنمية المواهب والإبداع لدى الطلاب من خلال الأفرقة والنشاطات المتنوعة.
+                    </p>
+                </div>
+            </div>
+        </section>
 
         <!-- Teams Section -->
-        <main class="max-w-6xl mx-auto px-6 py-16">
+        <main id="teams" class="max-w-6xl mx-auto px-6 py-16">
             <!-- Section header -->
             <div class="text-center mb-16">
                 <h2 id="our-clubs-title" class="text-4xl font-bold mb-4" style="color: #184682;">أفرقة مركزنا</h2>
