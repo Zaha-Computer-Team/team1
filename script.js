@@ -66,7 +66,15 @@ const translations = {
         team_2_name: "Robotics Team",
         team_2_description: "Innovative engineers who design, build, and program robots while learning cutting-edge technology and problem-solving skills.",
         team_3_name: "Piano Team",
-        team_3_description: "Talented pianists who master classical and modern pieces, perform in concerts, and share the joy of music with others."
+         team_3_description: "Talented pianists who master classical and modern pieces, perform in concerts, and share the joy of music with others.",
+        
+        // About and Contact sections
+        about_title: "About Zaha Cultural Center",
+        about_description: "Zaha Cultural Center is an educational cultural center that aims to develop talents and creativity among students through various teams and activities.",
+        contact_title: "Contact Us",
+        contact_description: "We are here to answer your questions and listen to your suggestions",
+        contact_info_title: "Contact Information",
+        contact_hours_title: "Operating Hours"
     },
     ar: {
         // Header content
@@ -126,6 +134,9 @@ function toggleLanguage() {
     
     // Update all translatable text elements
     updateLanguageContent();
+           
+    // Update navigation language
+    updateNavigationLanguage();
 }
 
 // Updates all text content based on current language
@@ -254,6 +265,25 @@ function updateLanguageContent() {
     
     const videoGalleryTitle = document.getElementById('video-gallery-title');
     if (videoGalleryTitle) videoGalleryTitle.textContent = t.video_gallery;
+    // Update About section
+    const aboutTitle = document.getElementById('about-title');
+    if (aboutTitle) aboutTitle.textContent = t.about_title;
+    
+    const aboutDescription = document.getElementById('about-description');
+    if (aboutDescription) aboutDescription.textContent = t.about_description;
+    
+    // Update Contact section
+    const contactTitle = document.getElementById('contact-title');
+    if (contactTitle) contactTitle.textContent = t.contact_title;
+    
+    const contactDescription = document.getElementById('contact-description');
+    if (contactDescription) contactDescription.textContent = t.contact_description;
+    
+    const contactInfoTitle = document.getElementById('contact-info-title');
+    if (contactInfoTitle) contactInfoTitle.textContent = t.contact_info_title;
+    
+    const contactHoursTitle = document.getElementById('contact-hours-title');
+    if (contactHoursTitle) contactHoursTitle.textContent = t.contact_hours_title;
 }
 
 // School club team data object containing detailed information for all 6 clubs
@@ -295,8 +325,8 @@ const teamData = {
             { src: "https://images.unsplash.com/photo-1522770179533-24471fcdba45?q=80&w=1200&auto=format&fit=crop", caption: "Goal celebration" }
         ],
         videos: [
-            { src: "https://www.youtube.com/embed/6PHZzG0Ww1E", caption: "Training drills" },
-            { src: "https://www.youtube.com/embed/5qap5aO4i9A", caption: "Highlights" }
+             { iframe:"images/robot2.mp4", caption: "FIRST LEGO League highlights" },
+            { iframe: "images/robot.mp4", caption: "Robot demo" }
         ]
     },
     robotics: {
@@ -336,8 +366,8 @@ const teamData = {
             { src: "images/robotics4.jpg", caption: "With judges at competition" }
         ],
         videos: [
-            { src: "https://www.youtube.com/embed/HbYg2k5Qn6g", caption: "FIRST LEGO League highlights" },
-            { src: "https://www.youtube.com/embed/5n1J4N9W2a8", caption: "Robot demo" }
+             { iframe:"images/robot2.mp4", caption: "FIRST LEGO League highlights" },
+            { iframe: "images/robot.mp4", caption: "Robot demo" }
         ]
     },
     piano: {
@@ -376,8 +406,8 @@ const teamData = {
             { src: "https://images.unsplash.com/photo-1508779018996-480c1e4e4d0a?q=80&w=1200&auto=format&fit=crop", caption: "Recital" }
         ],
         videos: [
-            { src: "https://www.youtube.com/embed/7maJOI3QMu0", caption: "Piano performance" },
-            { src: "https://www.youtube.com/embed/5NV6Rdv1a3I", caption: "Practice tips" }
+  { iframe:"images/robot2.mp4", caption: "FIRST LEGO League highlights" },
+            { iframe: "images/robot.mp4", caption: "Robot demo" }
         ]
     },
     guitar: {
@@ -416,8 +446,8 @@ const teamData = {
             { src: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1200&auto=format&fit=crop", caption: "Learning chords" }
         ],
         videos: [
-            { src: "https://www.youtube.com/embed/2Vv-BfVoq4g", caption: "Guitar cover" },
-            { src: "https://www.youtube.com/embed/YQHsXMglC9A", caption: "Acoustic session" }
+              { iframe:"images/robot2.mp4", caption: "FIRST LEGO League highlights" },
+            { iframe: "images/robot.mp4", caption: "Robot demo" }
         ]
     },
     dance: {
@@ -456,8 +486,8 @@ const teamData = {
             { src: "images/dabka3.jpg", caption: "Stage performance in white" }
         ],
         videos: [
-            { src: "https://www.youtube.com/embed/OPf0YbXqDm0", caption: "Showcase" },
-            { src: "https://www.youtube.com/embed/fRh_vgS2dFE", caption: "Choreography" }
+             { iframe:"images/robot2.mp4", caption: "FIRST LEGO League highlights" },
+            { iframe: "images/robot.mp4", caption: "Robot demo" }
         ]
     },
     coding: {
@@ -496,8 +526,8 @@ const teamData = {
             { src: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop", caption: "App development" }
         ],
         videos: [
-            { src: "https://www.youtube.com/embed/3e7OX6N0TtU", caption: "App demo" },
-            { src: "https://www.youtube.com/embed/gG7uCskUOrA", caption: "Coding tips" }
+             { iframe:"images/robot2.mp4", caption: "FIRST LEGO League highlights" },
+            { iframe: "images/robot.mp4", caption: "Robot demo" }
         ]
     }
 };
@@ -810,6 +840,141 @@ function closeTeamPage() {
     detailPage.style.transform = 'translateX(100%)'; // Slide page off-screen to the right
     document.body.style.overflow = 'auto'; // Restore page scrolling
 }
+function initNavigation() {
+    const navbar = document.getElementById('navbar');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+    
+    // Mobile menu toggle
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            
+            // Toggle hamburger icon
+            const icon = mobileMenuBtn.querySelector('svg');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+            } else {
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+            }
+        });
+    }
+    
+    // Close mobile menu when clicking on a link
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuBtn.querySelector('svg');
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+            }
+        });
+    });
+    
+    // Navbar scroll effect
+    let lastScroll = 0;
+    window.addEventListener('scroll', function() {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        
+        lastScroll = currentScroll;
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href !== '#' && href !== '#home') {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 80; // Navbar height
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            } else if (href === '#home') {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Active link highlighting on scroll
+    const sections = document.querySelectorAll('section[id], header[id], main[id]');
+    
+    function highlightActiveLink() {
+        const scrollY = window.pageYOffset;
+        
+        sections.forEach(section => {
+            const sectionHeight = section.offsetHeight;
+            const sectionTop = section.offsetTop - 100;
+            const sectionId = section.getAttribute('id');
+            
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${sectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+        
+        // Highlight home link when at top of page
+        if (scrollY < 100) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#home') {
+                    link.classList.add('active');
+                }
+            });
+        }
+    }
+    
+    window.addEventListener('scroll', highlightActiveLink);
+    highlightActiveLink(); // Call once on load
+}
+
+// Update navigation language text
+function updateNavigationLanguage() {
+    const isArabic = currentLanguage === 'ar';
+    
+    // Desktop navigation
+    document.getElementById('nav-home-en').style.display = isArabic ? 'none' : 'inline';
+    document.getElementById('nav-home-ar').style.display = isArabic ? 'inline' : 'none';
+    document.getElementById('nav-about-en').style.display = isArabic ? 'none' : 'inline';
+    document.getElementById('nav-about-ar').style.display = isArabic ? 'inline' : 'none';
+    document.getElementById('nav-teams-en').style.display = isArabic ? 'none' : 'inline';
+    document.getElementById('nav-teams-ar').style.display = isArabic ? 'inline' : 'none';
+    document.getElementById('nav-contact-en').style.display = isArabic ? 'none' : 'inline';
+    document.getElementById('nav-contact-ar').style.display = isArabic ? 'inline' : 'none';
+    document.getElementById('nav-main-website-en').style.display = isArabic ? 'none' : 'inline';
+    document.getElementById('nav-main-website-ar').style.display = isArabic ? 'inline' : 'none';
+    
+    // Mobile navigation
+    document.getElementById('nav-home-mobile-en').style.display = isArabic ? 'none' : 'inline';
+    document.getElementById('nav-home-mobile-ar').style.display = isArabic ? 'inline' : 'none';
+    document.getElementById('nav-about-mobile-en').style.display = isArabic ? 'none' : 'inline';
+    document.getElementById('nav-about-mobile-ar').style.display = isArabic ? 'inline' : 'none';
+    document.getElementById('nav-teams-mobile-en').style.display = isArabic ? 'none' : 'inline';
+    document.getElementById('nav-teams-mobile-ar').style.display = isArabic ? 'inline' : 'none';
+    document.getElementById('nav-contact-mobile-en').style.display = isArabic ? 'none' : 'inline';
+    document.getElementById('nav-contact-mobile-ar').style.display = isArabic ? 'inline' : 'none';
+    document.getElementById('nav-main-website-mobile-en').style.display = isArabic ? 'none' : 'inline';
+    document.getElementById('nav-main-website-mobile-ar').style.display = isArabic ? 'inline' : 'none';
+}
 
 // Initialize the page with Arabic as default language
 document.addEventListener('DOMContentLoaded', function() {
@@ -820,8 +985,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Start the photo slideshow
     startSlideshow();
     
+    // Initialize navigation
+    initNavigation();
+    
     // Update language content to Arabic
     updateLanguageContent();
+    
+    // Update navigation language
+    updateNavigationLanguage();
 });
 
 // Initialize the SDK
@@ -833,6 +1004,37 @@ if (window.elementSdk) {
         mapToEditPanelValues
     });
 }
+// Initialize the page with Arabic as default language
+document.addEventListener('DOMContentLoaded', function() {
+    // Set Arabic as default
+    document.documentElement.dir = 'rtl';
+    document.documentElement.lang = 'ar';
+    
+    // Start the photo slideshow
+    startSlideshow();
+    
+      // Initialize navigation
+    initNavigation();
+    
+    // Update language content to Arabic
+    updateLanguageContent();
+     // Update navigation language
+    updateNavigationLanguage();
+        
+    // Update navigation language
+    updateNavigationLanguage();
+});
+
+// Initialize the SDK
+if (window.elementSdk) {
+    window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+    });
+}
+
 
 
 
