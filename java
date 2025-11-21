@@ -447,6 +447,8 @@ const teamData = {
         videos: [
               { iframe:"images/robot2.mp4", caption: "FIRST LEGO League highlights" },
             { iframe: "images/robot.mp4", caption: "Robot demo" }
+        {iframe : " videoplayback (2).mp4 " , caption : "Guitarists full of energy, feeling, and love" }
+        
         ]
     },
     dance: {
@@ -483,11 +485,18 @@ const teamData = {
             { src: "images/dabka1.jpg", caption: "Performance at Jerash" },
             { src: "images/dabka2.jpg", caption: "Team at Roman columns" },
             { src: "images/dabka3.jpg", caption: "Stage performance in white" }
+            { scr: "
+        
+        
         ],
+        
         videos: [
              { iframe:"images/robot2.mp4", caption: "FIRST LEGO League highlights" },
             { iframe: "images/robot.mp4", caption: "Robot demo" }
-        ]
+             {  iframe: "videoplayback.mp4", caption: " Dabke dancers full of energy, art, and heritage " }
+             
+             ]
+             
     },
     coding: {
         name: "Coding Team",
@@ -1033,6 +1042,7 @@ if (window.elementSdk) {
         mapToEditPanelValues
     });
 }
+
 
 
 
