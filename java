@@ -379,10 +379,10 @@ const teamData = {
             
         ],
         members: [
-            { name: "ibrahim", role: "Lead Pianist", initials: "IC", gradient: "from-red-300 to-orange-400" },
-            { name: "alina", role: "Classical Specialist", initials: "MJ", gradient: "from-orange-300 to-yellow-400" },
-            { name: "abdulrahman", role: "Contemporary Player", initials: "SM", gradient: "from-yellow-300 to-green-400" },
-            { name: "Ethan Kim", role: "Jazz Pianist", initials: "EK", gradient: "from-green-300 to-teal-400" },
+            { name: "esam", role: "Lead Pianist", initials: "IC", gradient: "from-red-300 to-orange-400" },
+            { name: "hosam", role: "Classical Specialist", initials: "MJ", gradient: "from-orange-300 to-yellow-400" },
+            { name: "nawras", role: "Contemporary Player", initials: "SM", gradient: "from-yellow-300 to-green-400" },
+            { name: "farah", role: "Jazz Pianist", initials: "EK", gradient: "from-green-300 to-teal-400" },
         ],
 
         projects: [
@@ -419,10 +419,10 @@ const teamData = {
             { name: "Ms. dania", title: "Music Coach", initials: "AF", experience: "12+ years teaching• Singer-songwriter", gradient: "from-orange-400 to-red-500" }
         ],
         members: [
-            { name: "ali shrayda", role: "Lead Guitarist", initials: "JM", gradient: "from-yellow-300 to-orange-400" },
-            { name: "Zoe Chen", role: "Acoustic Specialist", initials: "ZC", gradient: "from-orange-300 to-red-400" },
-            { name: "Marcus Johnson", role: "Bass Guitarist", initials: "MJ", gradient: "from-red-300 to-pink-400" },
-            { name: "Lily Rodriguez", role: "Rhythm Guitarist", initials: "LR", gradient: "from-pink-300 to-purple-400" },
+            { name: "abdallh haroun", role: "Lead Guitarist", initials: "JM", gradient: "from-yellow-300 to-orange-400" },
+            { name: "qusay", role: "Acoustic Specialist", initials: "ZC", gradient: "from-orange-300 to-red-400" },
+            { name: "sale", role: "Bass Guitarist", initials: "MJ", gradient: "from-red-300 to-pink-400" },
+            { name: "farah", role: "Rhythm Guitarist", initials: "LR", gradient: "from-pink-300 to-purple-400" },
            
         ],
         projects: [
@@ -1042,6 +1042,7 @@ if (window.elementSdk) {
         mapToEditPanelValues
     });
 }
+
 
 
 
