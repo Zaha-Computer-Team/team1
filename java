@@ -375,8 +375,8 @@ const teamData = {
         gradient: "from-red-500 to-orange-600",
         backgroundColor: "#f25242",
         coaches: [
-            { name: "الأستاذة إيلينا روسي", title: "مدربة البيانو", initials: "ER", experience: "أكثر من 20 عاماً في التدريس • عازفة بيانو محترفة", gradient: "from-red-400 to-orange-500" },
-            { name: "الأستاذ جيمس ليو", title: "مدرب نظريات الموسيقى", initials: "JL", experience: "أكثر من 15 عاماً في التدريس • مؤلف موسيقي", gradient: "from-orange-400 to-yellow-500" }
+            { name:" الاستاد احمد ", title: "مدربة البيانو", initials: "ER", experience: "أكثر من 20 عاماً في التدريس • عازفة بيانو محترفة", gradient: "from-red-400 to-orange-500" },
+            
         ],
         members: [
             { name: "ibrahim", role: "Lead Pianist", initials: "IC", gradient: "from-red-300 to-orange-400" },
@@ -392,7 +392,7 @@ const teamData = {
             { title: "Masterclass Series", description: "Hosting masterclasses with professional pianists and learning advanced techniques and interpretation.", emoji: "🎓", tags: ["Masterclass", "Learning", "Professional"], gradient: "from-green-400 to-teal-500" }
         ],
         events: [
-            { title: "Annual Recital", description: "Showcase recital featuring all piano team members performing their best pieces for family and friends.", date: "May 10, 2024 • 7:00 PM - 9:00 PM", type: "Recital" },
+            { title: "jarash", description: "Showcase recital featuring all piano team members performing their best pieces for family and friends.", date: "May 10, 2024 • 7:00 PM - 9:00 PM", type: "Recital" },
             { title: "Piano Competition", description: "Regional piano competition where students compete in various categories and skill levels.", date: "April 20, 2024 • 10:00 AM - 6:00 PM", type: "Competition" }
         ],
         awards: [
@@ -415,11 +415,11 @@ const teamData = {
         gradient: "from-yellow-500 to-orange-600",
         backgroundColor: "#ffba00",
         coaches: [
-            { name: "Mr. Carlos Mendez", title: "Guitar Instructor", initials: "CM", experience: "18+ years teaching • Professional guitarist", gradient: "from-yellow-400 to-orange-500" },
-            { name: "Ms. Amy Foster", title: "Music Coach", initials: "AF", experience: "12+ years teaching • Singer-songwriter", gradient: "from-orange-400 to-red-500" }
+            { name: "Mr. ali shrida", title: "Guitar Instructor", initials: "CM", experience: "18+ years teaching • Professional guitarist", gradient: "from-yellow-400 to-orange-500" },
+            { name: "Ms. dania", title: "Music Coach", initials: "AF", experience: "12+ years teaching• Singer-songwriter", gradient: "from-orange-400 to-red-500" }
         ],
         members: [
-            { name: "ibt", role: "Lead Guitarist", initials: "JM", gradient: "from-yellow-300 to-orange-400" },
+            { name: "ali shrayda", role: "Lead Guitarist", initials: "JM", gradient: "from-yellow-300 to-orange-400" },
             { name: "Zoe Chen", role: "Acoustic Specialist", initials: "ZC", gradient: "from-orange-300 to-red-400" },
             { name: "Marcus Johnson", role: "Bass Guitarist", initials: "MJ", gradient: "from-red-300 to-pink-400" },
             { name: "Lily Rodriguez", role: "Rhythm Guitarist", initials: "LR", gradient: "from-pink-300 to-purple-400" },
@@ -457,8 +457,8 @@ const teamData = {
         gradient: "from-purple-500 to-pink-600",
         backgroundColor: "#8062c6",
         coaches: [
-            { name: "Ms. Maria Santos", title: "Dance Director", initials: "MS", experience: "16+ years teaching • Professional dancer", gradient: "from-purple-400 to-pink-500" },
-            { name: "Mr. Jordan Taylor", title: "Choreographer", initials: "JT", experience: "10+ years teaching • Hip-hop specialist", gradient: "from-pink-400 to-red-500" }
+            { name: "Ms. razan", title: "Dance Director", initials: "MS", experience: "10+ years teaching • Professional dancer", gradient: "from-purple-400 to-pink-500" },
+          
         ],
         members: [
             { name: "sally", role: "Team Captain", initials: "AT", gradient: "from-purple-300 to-pink-400" },
@@ -504,8 +504,8 @@ const teamData = {
         gradient: "from-cyan-500 to-blue-600",
         backgroundColor: "#00899a",
         coaches: [
-            { name: "Mr. Alex Chen", title: "Computer Science Teacher", initials: "AC", experience: "14+ years teaching • Software engineer", gradient: "from-cyan-400 to-blue-500" },
-            { name: "Ms. Rachel Kim", title: "Programming Mentor", initials: "RK", experience: "8+ years industry • Web developer", gradient: "from-blue-400 to-indigo-500" }
+          
+            { name: "Ms. mays alkalel", title: "Programming Mentor", initials: "RK", experience: "8+ years industry • Web developer", gradient: "from-blue-400 to-indigo-500" }
         ],
         members: [
             { name: "Ruqaya", role: "Team Lead", initials: "RZ", gradient: "from-cyan-300 to-blue-400" },
@@ -1042,6 +1042,7 @@ if (window.elementSdk) {
         mapToEditPanelValues
     });
 }
+
 
 
 
