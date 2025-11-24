@@ -416,7 +416,7 @@ const teamData = {
         backgroundColor: "#ffba00",
         coaches: [
             { name: "Mr. ali shrida", title: "Guitar Instructor", initials: "CM", experience: "18+ years teaching • Professional guitarist", gradient: "from-yellow-400 to-orange-500" },
-            { name: "Ms. dania", title: "Music Coach", initials: "AF", experience: "12+ years teaching• Singer-songwriter", gradient: "from-orange-400 to-red-500" }
+           
         ],
         members: [
             { name: "abdallh haroun", role: "Lead Guitarist", initials: "JM", gradient: "from-yellow-300 to-orange-400" },
@@ -1042,6 +1042,7 @@ if (window.elementSdk) {
         mapToEditPanelValues
     });
 }
+
 
 
 
