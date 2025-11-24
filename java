@@ -294,7 +294,7 @@ const teamData = {
         gradient: "from-green-500 to-teal-600",
         backgroundColor: "#00a240",
         coaches: [
-            { name: "Coach Martinez", title: "Head Coach", initials: "CM", experience: "15+ years coaching • Former professional player", gradient: "from-green-400 to-teal-500" },
+            0
             { name: "Coach Johnson", title: "Assistant Coach", initials: "CJ", experience: "8+ years coaching • Fitness specialist", gradient: "from-teal-400 to-blue-500" }
         ],
         members: [
@@ -334,8 +334,8 @@ const teamData = {
         gradient: "from-blue-500 to-purple-600",
         backgroundColor: "#184682",
         coaches: [
-            { name: "Dr. Sarah Chen", title: "Faculty Advisor", initials: "SC", experience: "12+ years engineering • Robotics specialist", gradient: "from-blue-400 to-purple-500" },
-            { name: "Mr. David Park", title: "Technical Mentor", initials: "DP", experience: "10+ years industry • Software engineer", gradient: "from-purple-400 to-indigo-500" }
+            { name: "Dr.abd alrahman mahamed", title: "Faculty Advisor", initials: "SC", experience: "12+ years engineering • Robotics specialist", gradient: "from-blue-400 to-purple-500" },
+          
         ],
         members: [
             { name: "sara", role: "Team Leader", initials: "EJ", gradient: "from-blue-300 to-purple-400" },
@@ -1042,6 +1042,7 @@ if (window.elementSdk) {
         mapToEditPanelValues
     });
 }
+
 
 
 
