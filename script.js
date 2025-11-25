@@ -294,8 +294,8 @@ const teamData = {
         gradient: "from-green-500 to-teal-600",
         backgroundColor: "#00a240",
         coaches: [
-            0
-            { name: "Coach Johnson", title: "Assistant Coach", initials: "CJ", experience: "8+ years coaching • Fitness specialist", gradient: "from-teal-400 to-blue-500" }
+            
+            { name: "Coach Johnson", title: "Assistant Coach", initials: "CJ", experience: "8+ years coaching • Fitness specialist", gradient: "from-teal-400 to-blue-500" },
         ],
         members: [
             { name: "Alex Rodriguez", role: "Team Captain", initials: "AR", gradient: "from-green-300 to-teal-400" },
@@ -446,7 +446,7 @@ const teamData = {
         ],
         videos: [
               { iframe:"images/robot2.mp4", caption: "FIRST LEGO League highlights" },
-            { iframe: "images/robot.mp4", caption: "Robot demo" }
+            { iframe: "images/robot.mp4", caption: "Robot demo" },
         {iframe : " videoplayback (2).mp4 " , caption : "Guitarists full of energy, feeling, and love" }
         
         ]
@@ -484,16 +484,16 @@ const teamData = {
         photos: [
             { src: "images/dabka1.jpg", caption: "Performance at Jerash" },
             { src: "images/dabka2.jpg", caption: "Team at Roman columns" },
-            { src: "images/dabka3.jpg", caption: "Stage performance in white" }
-            { scr: "
+            { src: "images/dabka3.jpg", caption: "Stage performance in white" },
+            { scr: ""}
         
         
         ],
         
         videos: [
              { iframe:"images/robot2.mp4", caption: "FIRST LEGO League highlights" },
-            { iframe: "images/robot.mp4", caption: "Robot demo" }
-             {  iframe: "videoplayback.mp4", caption: " Dabke dancers full of energy, art, and heritage " }
+            { iframe: "images/robot.mp4", caption: "Robot demo" },
+             {  iframe: "videoplayback.mp4", caption: " Dabke dancers full of energy, art, and heritage " },
              
              ]
              
