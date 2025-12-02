@@ -392,12 +392,12 @@ const teamData = {
             { title: "Masterclass Series", description: "Hosting masterclasses with professional pianists and learning advanced techniques and interpretation.", emoji: "🎓", tags: ["Masterclass", "Learning", "Professional"], gradient: "from-green-400 to-teal-500" }
         ],
         events: [
-            { title: "jarash", description: "Showcase recital featuring all piano team members performing their best pieces for family and friends.", date: "May 10, 2024 • 7:00 PM - 9:00 PM", type: "Recital" },
+            { title: "A party with the Zaha Ladies Choir", description: "Showcase recital featuring all piano team members performing their best pieces for family and friends.", date: "May 10, 2025 • 7:00 PM - 9:00 PM", type: "Recital" },
             { title: "Piano Competition", description: "Regional piano competition where students compete in various categories and skill levels.", date: "April 20, 2024 • 10:00 AM - 6:00 PM", type: "Competition" }
         ],
         awards: [
             { title: "Excellence in Music 2023", subtitle: "Outstanding Musical Achievement", description: "Recognized for exceptional musical performances and dedication to advancing piano education in the school.", icon: "🎖️", gradient: "from-red-50 to-orange-50", border: "border-red-200" },
-            { title: "Community Service Award", subtitle: "Musical Outreach Excellence", description: "Honored for bringing joy through music to community members through regular volunteer performances.", icon: "🌟", gradient: "from-orange-50 to-yellow-50", border: "border-orange-200" }
+            { title: "jarash", subtitle: "Musical Outreach Excellence", description: "Honored for bringing joy through music to community members through regular volunteer performances.", icon: "🌟", gradient: "from-orange-50 to-yellow-50", border: "border-orange-200" }
         ],
         photos: [
             { src: "https://images.unsplash.com/photo-1513883049090-d0b7439799bf?q=80&w=1200&auto=format&fit=crop", caption: "Kids learning piano" },
@@ -445,10 +445,18 @@ const teamData = {
             { src: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1200&auto=format&fit=crop", caption: "Learning chords" }
         ],
         videos: [
-              { iframe:"images/robot2.mp4", caption: "FIRST LEGO League highlights" },
-            { iframe: "images/robot.mp4", caption: "Robot demo" },
-        {iframe : " videoplayback (2).mp4 " , caption : "Guitarists full of energy, feeling, and love" }
-        
+              { iframe:"team1-main/getar.mp4", caption: "FIRST LEGO League highlights" },
+           
+              { iframe: "team1-main/getar.mp4", caption: "Robot demo" } ,
+
+              
+            {iframe : " team1-main/getar.mp4 " , caption : "Guitarists full of energy, feeling} the music" } ,
+            
+            {  iframe : "team1-main/getar.mp4" , caption : "gret Guitarists" }
+
+
+
+
         ]
     },
     dance: {
