@@ -83,7 +83,7 @@ const translations = {
         // Navigation and UI
         language_text: "English",
         our_teams: "أفرقة مركزنا",
-        teams_description: "انضم إلى أنديتنا النابضة بالحياة واكتشف مواهبك أثناء تكوين أصدقاء جدد وخلق ذكريات لا تُنسى",
+        teams_description: "مركز زها تأسّس عام 1998، وهو مركز ثقافي تنموي للأطفال والشباب في الأردن هدف إلى “تنمية قدرة الأطفال على الإبداع والخيال والابتكار” من خلال أنشطة متنوعة — فنية، ثقافية، ترفيهية، تعليمية — بحيث يقدم بيئة تفاعلية ومشجعة للطفل والشباب.  ",
         watch_teams_video: "شاهد أنديتنا في العمل",
         video_description: "انظر كيف يزدهر طلابنا في أنشطتهم المفضلة",
         click_to_explore: "انقر للاستكشاف ←",
@@ -364,10 +364,15 @@ const teamData = {
             { src: "images/robotics3.jpg", caption: "With coach after event" },
             { src: "images/robotics4.jpg", caption: "With judges at competition" }
         ],
-        videos: [
-             { iframe:"images/robot2.mp4", caption: "FIRST LEGO League highlights" },
-            { iframe: "images/robot.mp4", caption: "Robot demo" }
-        ]
+       videos: [
+
+    { iframe: " /images/team1-mainIETY9000.MP4", caption: "FIRST LEGO League highlights" },
+
+    { iframe: "team1-main/images/AEWC7252.MP4", caption: "Robot demo" },
+
+    { iframe: "images/robot.mp4", caption: "Robot demo" }
+]
+
     },
     piano: {
         name: "فريق البيانو",
@@ -402,7 +407,8 @@ const teamData = {
         photos: [
             { src: "https://images.unsplash.com/photo-1513883049090-d0b7439799bf?q=80&w=1200&auto=format&fit=crop", caption: "Kids learning piano" },
             { src: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=1200&auto=format&fit=crop", caption: "Practice time" },
-            { src: "https://images.unsplash.com/photo-1508779018996-480c1e4e4d0a?q=80&w=1200&auto=format&fit=crop", caption: "Recital" }
+           
+            { src: "team1-main/1b193032-628b-4ae6-aa65-e86b1f913a46.jpg", caption: "Recital" }
         ],
         videos: [
   { iframe:"images/robot2.mp4", caption: "FIRST LEGO League highlights" },
@@ -445,14 +451,11 @@ const teamData = {
             { src: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1200&auto=format&fit=crop", caption: "Learning chords" }
         ],
         videos: [
-              { iframe:"team1-main/getar.mp4", caption: "FIRST LEGO League highlights" },
-           
-              { iframe: "team1-main/getar.mp4", caption: "Robot demo" } ,
-
+              { iframe:"team1-main/getar.mp4", caption: "FIRST LEGO League highlights" } ,
               
-            {iframe : " team1-main/getar.mp4 " , caption : "Guitarists full of energy, feeling} the music" } ,
+             {iframe : " team1-main/getar.mp4 " , caption : "Guitarists full of energy, feeling} the music" } ,
             
-            {  iframe : "team1-main/getar.mp4" , caption : "gret Guitarists" }
+            {  iframe : "team1-main/getar.mp4" , caption : "gret Guitarists" } ,
 
 
 
@@ -493,7 +496,7 @@ const teamData = {
             { src: "images/dabka1.jpg", caption: "Performance at Jerash" },
             { src: "images/dabka2.jpg", caption: "Team at Roman columns" },
             { src: "images/dabka3.jpg", caption: "Stage performance in white" },
-            { scr: ""}
+            { scr: "team1-main/images/dabka3.png"}
         
         
         ],
@@ -1048,7 +1051,19 @@ if (window.elementSdk) {
         onConfigChange,
         mapToCapabilities,
         mapToEditPanelValues
+
+
     });
+
+
+
+
+    const friday = document.getElementById('friday');
+if (friday) {
+    friday.textContent = t.friday;
+    friday.setAttribute("dir", "rtl");
+}
+
 }
 
 
