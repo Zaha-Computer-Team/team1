@@ -87,11 +87,11 @@ const translations = {
         watch_teams_video: "شاهد أنديتنا في العمل",
         video_description: "انظر كيف يزدهر طلابنا في أنشطتهم المفضلة",
         click_to_explore: "انقر للاستكشاف ←",
-        back_to_teams: "العودة إلى الأندية",
-        meet_our_team: "تعرف على ناديّنا",
-        team_coaches: "مستشارو النادي",
-        team_members: "أعضاء النادي",
-        featured_projects: "أنشطة النادي",
+        back_to_teams: "العودة إلى الأفرقة",
+        meet_our_team: "تعرف على أفرقتنا",
+        team_coaches: "مدربين الأفرقة",
+        team_members: "أعضاء الفريق",
+        featured_projects: "أنشطة الفريق",
         upcoming_events: "الأحداث القادمة",
         awards_recognition: "الجوائز والإنجازات",
         photo_gallery: "معرض الصور",
@@ -169,7 +169,7 @@ function updateLanguageContent() {
     
     // Update section headings and static text
     const ourClubsTitle = document.getElementById('our-clubs-title');
-    if (ourClubsTitle) ourClubsTitle.textContent = t.our_teams;
+    if (ourClubsTitle) ourClubsTitle.textContent = t.our_teams;ٍ
     
     const clubsDescription = document.getElementById('clubs-description');
     if (clubsDescription) clubsDescription.textContent = t.teams_description;
@@ -1065,6 +1065,7 @@ if (friday) {
 }
 
 }
+
 
 
 
